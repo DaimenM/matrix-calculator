@@ -128,6 +128,8 @@ public class Matrix {
 			throw new IllegalArgumentException("Invalid amount of entries");
 		for(int i=0;i<this.getRows();i++) 
 			for(int j=0;j<this.getColumns();j++) {
+				if(!arrOfEntries[index].matches("^-?\\d*\\.?\\d*/?\\d*$"))
+					throw new IllegalArgumentException("Invalid entry in matrix");
 				String[] frac = arrOfEntries[index].split("/");
 				String[] decimal = arrOfEntries[index].split("\\.");
 				if(frac.length==2 && !arrOfEntries[index].contains(".")) this.getMatrix()[i][j] = new Fraction(Integer.parseInt(frac[0]),Integer.parseInt(frac[1]));
