@@ -1,0 +1,78 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 50px;
+    padding: 20px 10px;
+}
+
+.sidebar.collapsed .operations-list {
+    display: none;
+}
+
+.sidebar.collapsed h2 {
+    display: none;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.collapse-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #343a40;
+}
+
+.collapse-btn:hover {
+    background-color: #e9ecef;
+}
+
+.sidebar h2 {
+    color: #343a40;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.operations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.operation-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.operation-btn:hover {
+    background-color: #e9ecef;
+}
+
+.operation-btn.active {
+    background-color: #007bff;
+    color: white;
+}
